@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "server": "node server/index.js",
-    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "start": "node server/index.js",
     "build": "vite build",
     "seed:demo": "node server/seed-demo.js",
-    "start:prod": "node server/index.js",
     "seed:apresentacao": "node server/seed-apresentacao.js"
   },
   "dependencies": {
