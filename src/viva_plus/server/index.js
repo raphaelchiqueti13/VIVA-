@@ -10,7 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const app = express();
-app.set("trust proxy", process.env.TRUST_PROXY === "true" ? 1 : false);
+app.set("trust proxy", (process.env.TRUST_PROXY === "true" || process.env.RENDER === "true") ? 1 : false);
 const PORT = Number(process.env.PORT || 3001);
 const isProduction = process.env.NODE_ENV === "production";
 const JWT_SECRET = process.env.JWT_SECRET;
